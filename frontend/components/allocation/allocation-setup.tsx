@@ -66,7 +66,7 @@ export function AllocationSetup({ currentRule, onRuleUpdated }: AllocationSetupP
       </CardHeader>
       <CardContent className="space-y-6">
         {/* Auto-allocation toggle */}
-        <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
+        <div className="flex items-center justify-between p-4 rounded-lg">
           <div>
             <h3 className="font-medium">Auto-Allocation</h3>
             <p className="text-sm text-muted-foreground">Automatically split earnings when they arrive</p>
@@ -124,7 +124,7 @@ export function AllocationSetup({ currentRule, onRuleUpdated }: AllocationSetupP
               </Label>
               <span className="font-medium">{spendingPercentage}%</span>
             </div>
-            <div className="h-2 bg-amber-100 rounded-full">
+            <div className="h-2 rounded-full">
               <div
                 className="h-full bg-amber-500 rounded-full transition-all"
                 style={{ width: `${spendingPercentage}%` }}
@@ -137,7 +137,7 @@ export function AllocationSetup({ currentRule, onRuleUpdated }: AllocationSetupP
         </div>
 
         {/* Visual preview */}
-        <div className="bg-slate-50 rounded-lg p-4">
+        <div className="rounded-lg p-4">
           <h4 className="font-medium mb-4 text-center">Allocation Preview</h4>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">

@@ -46,9 +46,9 @@ export function EarningsHistory({ earnings }: EarningsHistoryProps) {
               </div>
             ) : (
               earnings.map((earning) => (
-                <div key={earning.id} className="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                <div key={earning.id} className="flex items-center justify-between p-3 rounded-lg">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center">
                       <DollarSign className="w-4 h-4 text-green-600" />
                     </div>
                     <div>

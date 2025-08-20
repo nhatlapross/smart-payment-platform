@@ -66,15 +66,15 @@ export function UpcomingBills({ bills, onPayNow }: UpcomingBillsProps) {
                   key={bill.id}
                   className={`p-3 rounded-lg border ${
                     isOverdue
-                      ? "bg-red-50 border-red-200"
+                      ? " border-red-200"
                       : isDueSoon
-                        ? "bg-amber-50 border-amber-200"
-                        : "bg-slate-50 border-slate-200"
+                        ? " border-amber-200"
+                        : " border-slate-200"
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center">
                         <CreditCard className="w-4 h-4 text-slate-600" />
                       </div>
                       <div>

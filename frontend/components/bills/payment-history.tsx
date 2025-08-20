@@ -38,13 +38,13 @@ export function PaymentHistory({ payments }: PaymentHistoryProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "completed":
-        return "bg-green-100 text-green-800"
+        return "text-green-800"
       case "failed":
-        return "bg-red-100 text-red-800"
+        return "text-red-800"
       case "pending":
-        return "bg-amber-100 text-amber-800"
+        return "text-amber-800"
       default:
-        return "bg-slate-100 text-slate-800"
+        return "text-slate-800"
     }
   }
 
@@ -77,7 +77,7 @@ export function PaymentHistory({ payments }: PaymentHistoryProps) {
           ) : (
             <div className="space-y-3">
               {payments.map((payment) => (
-                <div key={payment.id} className="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                <div key={payment.id} className="flex items-center justify-between p-3 rounded-lg">
                   <div className="flex items-center space-x-3">
                     {getStatusIcon(payment.payment_status)}
                     <div>

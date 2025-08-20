@@ -63,7 +63,7 @@ export function SavingsManager({ accounts, onAccountCreated }: SavingsManagerPro
       </CardHeader>
       <CardContent className="space-y-4">
         {showForm && (
-          <form onSubmit={handleSubmit} className="space-y-4 p-4 bg-green-50 rounded-lg">
+          <form onSubmit={handleSubmit} className="space-y-4 p-4 rounded-lg">
             <div className="space-y-2">
               <Label htmlFor="account-name">Account Name</Label>
               <Input
@@ -109,7 +109,7 @@ export function SavingsManager({ accounts, onAccountCreated }: SavingsManagerPro
                 : 0
 
               return (
-                <div key={account.id} className="p-4 bg-slate-50 rounded-lg">
+                <div key={account.id} className="p-4 rounded-lg">
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="font-medium">{account.account_name}</h4>
                     <Badge variant="outline" className="text-green-600">

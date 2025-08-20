@@ -107,7 +107,7 @@ export default function InvoicesPage() {
             {/* Streaming Invoice */}
             {streamingInvoice && (
               <div className="bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 space-y-6 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl"></div>
+                <div className="absolute inset-0 rounded-2xl"></div>
                 <div className="relative z-10">
                   <h2 className="text-2xl font-bold text-foreground">Active Payment Stream</h2>
                   <InvoiceStreaming invoice={streamingInvoice} onFactorInvoice={handleFactorInvoice} />

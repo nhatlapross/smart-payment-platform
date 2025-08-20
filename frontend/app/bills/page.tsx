@@ -58,6 +58,7 @@ export default function BillsPage() {
       amount: 800000,
       paid_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2).toISOString(), // 2 days ago
       payment_status: "completed",
+      created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3).toISOString(),
       bill: bills[0],
     },
     {
@@ -66,6 +67,7 @@ export default function BillsPage() {
       amount: 500000,
       paid_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 5).toISOString(), // 5 days ago
       payment_status: "completed",
+      created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 6).toISOString(),
       bill: bills[1],
     },
     {
@@ -74,6 +76,7 @@ export default function BillsPage() {
       amount: 180000,
       paid_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 1).toISOString(), // 1 day ago
       payment_status: "failed",
+      created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2).toISOString(),
       bill: bills[2],
     },
   ]
@@ -96,7 +99,7 @@ export default function BillsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen">
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

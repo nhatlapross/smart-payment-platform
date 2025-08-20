@@ -16,7 +16,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen scrollbar-hide">
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Real-time Earnings Section */}
@@ -93,7 +93,7 @@ export default function HomePage() {
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">View detailed analytics and manage your financial allocations</p>
               <Link href="/dashboard">
-                <Button className="w-full bg-cyan hover:bg-darkvibrant text-dark-blue rounded-xl font-semibold py-3 transition-all duration-200 hover:scale-105 shadow-lg">
+                <Button variant="outline" className="w-full border-border bg-secondary/50 hover:bg-primary hover:text-primary-foreground rounded-xl font-semibold py-3 transition-all duration-200 hover:scale-105">
                   Open Dashboard
                 </Button>
               </Link>

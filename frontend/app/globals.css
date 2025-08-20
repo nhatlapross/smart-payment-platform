@@ -128,9 +128,36 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(ellipse at top, color-mix(in srgb, var(--dark-blue) 90%, var(--darkvibrant)), var(--dark-blue));
+    background-image: url('/background.png'), radial-gradient(ellipse at top, color-mix(in srgb, var(--dark-blue) 90%, var(--darkvibrant)), var(--dark-blue));
+    background-size: cover, auto;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
     min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  button {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
   }
 
   /* Gradient noise texture with extracted colors */
@@ -163,5 +190,65 @@
 
   .btn-primary:hover {
     @apply brightness-110 scale-105;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Sparkle/Shimmer Effect for Toggle Button */
+  @keyframes sparkle {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(200%) translateY(200%) rotate(45deg);
+    }
+  }
+
+  .sparkle-effect {
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 35%,
+      rgba(255, 255, 255, 0.3) 40%,
+      rgba(255, 255, 255, 0.5) 45%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.1) 55%,
+      transparent 60%
+    );
+    animation: sparkle 0.8s ease-in-out;
+  }
+
+  /* Additional glowing effect on hover */
+  .toggle-button-wrapper:hover {
+    box-shadow: 
+      0 0 20px rgba(34, 211, 238, 0.3),
+      0 0 40px rgba(34, 211, 238, 0.2),
+      inset 0 0 20px rgba(34, 211, 238, 0.1);
+  }
+
+  /* Smooth transitions */
+  * {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  /* Pulse animation for the arrow on hover */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  .toggle-button-wrapper:hover .double-arrow-icon {
+    animation: pulse 1s infinite;
   }
 }

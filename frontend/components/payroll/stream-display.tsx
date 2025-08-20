@@ -67,7 +67,7 @@ export function StreamDisplay({ stream, onToggleStream }: StreamDisplayProps) {
 
       <CardContent className="space-y-4">
         {/* Real-time earnings display */}
-        <div className="text-center p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+        <div className="text-center p-4">
           <div className="text-sm text-muted-foreground mb-1">Today's Earnings</div>
           <div className="text-3xl font-bold text-green-600 tabular-nums">
             {FinancialCalculator.formatCurrency(currentEarnings)}
@@ -94,7 +94,7 @@ export function StreamDisplay({ stream, onToggleStream }: StreamDisplayProps) {
         {/* Stream stats */}
         <div className="grid grid-cols-3 gap-4 pt-2">
           <div className="text-center">
-            <div className="flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full mx-auto mb-1">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full mx-auto mb-1">
               <DollarSign className="w-4 h-4 text-blue-600" />
             </div>
             <div className="text-sm font-medium">
@@ -106,7 +106,7 @@ export function StreamDisplay({ stream, onToggleStream }: StreamDisplayProps) {
           </div>
 
           <div className="text-center">
-            <div className="flex items-center justify-center w-8 h-8 bg-green-100 rounded-full mx-auto mb-1">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full mx-auto mb-1">
               <Clock className="w-4 h-4 text-green-600" />
             </div>
             <div className="text-sm font-medium">{FinancialCalculator.formatCurrency(dailyEarnings)}</div>
@@ -114,7 +114,7 @@ export function StreamDisplay({ stream, onToggleStream }: StreamDisplayProps) {
           </div>
 
           <div className="text-center">
-            <div className="flex items-center justify-center w-8 h-8 bg-purple-100 rounded-full mx-auto mb-1">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full mx-auto mb-1">
               <TrendingUp className="w-4 h-4 text-purple-600" />
             </div>
             <div className="text-sm font-medium">{Math.round((currentEarnings / dailyEarnings) * 100)}%</div>

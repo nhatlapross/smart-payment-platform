@@ -70,6 +70,15 @@ export interface Bill {
   created_at: string
 }
 
+export interface BillPayment {
+  id: string
+  bill_id: string
+  amount: number
+  payment_status: "pending" | "completed" | "failed"
+  paid_at: string
+  created_at: string
+}
+
 export interface Invoice {
   id: string
   freelancer_id: string

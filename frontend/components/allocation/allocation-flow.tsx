@@ -53,7 +53,7 @@ export function AllocationFlow({ rule, recentEarning = 125000 }: AllocationFlowP
         </p>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center justify-between space-x-2 overflow-x-auto pb-2">
+        <div className="flex items-center justify-between space-x-2 overflow-x-auto scrollbar-hide pb-2">
           {flowItems.map((item, index) => (
             <div key={item.label} className="flex items-center space-x-2 min-w-0">
               <div className="flex flex-col items-center space-y-2 min-w-[120px]">
@@ -77,7 +77,7 @@ export function AllocationFlow({ rule, recentEarning = 125000 }: AllocationFlowP
         </div>
 
         {rule.is_active && (
-          <div className="mt-4 p-3 bg-green-50 rounded-lg">
+          <div className="mt-4 p-3 rounded-lg">
             <div className="flex items-center space-x-2 text-green-700">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               <span className="text-sm font-medium">Auto-allocation is active</span>

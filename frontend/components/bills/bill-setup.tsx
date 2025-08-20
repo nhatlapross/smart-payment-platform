@@ -146,7 +146,7 @@ export function BillSetup({ onBillCreated }: BillSetupProps) {
             </Select>
           </div>
 
-          <div className="flex items-center justify-between p-4 bg-purple-50 rounded-lg">
+          <div className="flex items-center justify-between p-4 rounded-lg">
             <div>
               <h4 className="font-medium">Auto-Pay</h4>
               <p className="text-sm text-muted-foreground">Automatically pay from streaming salary</p>

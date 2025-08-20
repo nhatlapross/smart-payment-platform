@@ -30,10 +30,10 @@ export function FinancialHealthScore() {
   }
 
   const getHealthLevel = (score: number) => {
-    if (score >= 80) return { label: "Excellent", color: "bg-green-100 text-green-800" }
-    if (score >= 70) return { label: "Good", color: "bg-blue-100 text-blue-800" }
-    if (score >= 60) return { label: "Fair", color: "bg-amber-100 text-amber-800" }
-    return { label: "Needs Improvement", color: "bg-red-100 text-red-800" }
+    if (score >= 80) return { label: "Excellent", color: "text-green-800" }
+    if (score >= 70) return { label: "Good", color: "text-blue-800" }
+    if (score >= 60) return { label: "Fair", color: "text-amber-800" }
+    return { label: "Needs Improvement", color: "text-red-800" }
   }
 
   const healthLevel = getHealthLevel(healthMetrics.overallScore)
@@ -123,17 +123,17 @@ export function FinancialHealthScore() {
           <h4 className="font-medium">Recommendations</h4>
           <div className="space-y-3">
             {recommendations.map((rec, index) => (
-              <div key={index} className="p-3 bg-slate-50 rounded-lg">
+              <div key={index} className="p-3 rounded-lg">
                 <div className="flex items-start justify-between mb-1">
                   <div className="font-medium text-sm">{rec.category}</div>
                   <Badge
                     variant="outline"
                     className={
                       rec.priority === "high"
-                        ? "bg-red-100 text-red-800"
+                        ? " text-red-800"
                         : rec.priority === "medium"
-                          ? "bg-amber-100 text-amber-800"
-                          : "bg-green-100 text-green-800"
+                          ? " text-amber-800"
+                          : " text-green-800"
                     }
                   >
                     {rec.priority}

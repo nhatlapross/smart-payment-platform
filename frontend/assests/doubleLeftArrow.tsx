@@ -1,0 +1,19 @@
+import React from 'react';
+
+const DoubleLeftArrowIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M13.939 4.939L6.87903 12L13.939 19.061L16.061 16.939L11.121 12L16.061 7.061L13.939 4.939Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export default DoubleLeftArrowIcon;

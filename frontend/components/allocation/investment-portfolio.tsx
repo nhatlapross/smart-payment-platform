@@ -101,7 +101,7 @@ export function InvestmentPortfolio({ investments, onInvestmentCreated }: Invest
       </CardHeader>
       <CardContent className="space-y-4">
         {showForm && (
-          <form onSubmit={handleSubmit} className="space-y-4 p-4 bg-blue-50 rounded-lg">
+          <form onSubmit={handleSubmit} className="space-y-4 p-4 rounded-lg">
             <div className="space-y-2">
               <Label>Investment Type</Label>
               <Select
@@ -166,9 +166,9 @@ export function InvestmentPortfolio({ investments, onInvestmentCreated }: Invest
               const gainLossPercent = (gainLoss / investment.amount) * 100
 
               return (
-                <div key={investment.id} className="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                <div key={investment.id} className="flex items-center justify-between p-3 rounded-lg">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center">
                       {getInvestmentIcon(investment.investment_type)}
                     </div>
                     <div>

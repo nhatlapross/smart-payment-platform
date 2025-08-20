@@ -81,12 +81,12 @@ export function BillList({ bills, onToggleAutoPay, onToggleActive }: BillListPro
                   key={bill.id}
                   className={`p-4 rounded-lg border ${
                     !bill.is_active
-                      ? "bg-slate-50 border-slate-200"
+                      ? " border-slate-200"
                       : isOverdue
-                        ? "bg-red-50 border-red-200"
+                        ? " border-red-200"
                         : isDueSoon
-                          ? "bg-amber-50 border-amber-200"
-                          : "bg-white border-slate-200"
+                          ? " border-amber-200"
+                          : " border-slate-200"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-3">

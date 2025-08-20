@@ -51,21 +51,17 @@ export default function PayrollPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <Button onClick={() => setShowSetup(true)} className="flex items-center space-x-2">
-              <Plus className="w-4 h-4" />
-              <span>New Stream</span>
-            </Button>
-          </div>
-        </div>
-      </header>
-
+    <div className="min-h-screen">
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <div className="flex items-center justify-between h-16">
+          <Button onClick={() => setShowSetup(true)} className="flex items-center space-x-2">
+            <Plus className="w-4 h-4" />
+            <span>New Stream</span>
+          </Button>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Stream Setup/Management */}
           <div className="lg:col-span-2 space-y-6">
@@ -85,8 +81,8 @@ export default function PayrollPage() {
             <div className="space-y-4">
               <h2 className="text-lg font-semibold">Active Streams</h2>
               {streams.length === 0 ? (
-                <div className="text-center py-12 bg-white rounded-xl border border-slate-200">
-                  <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-center py-12 rounded-xl border border-slate-200">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Plus className="w-8 h-8 text-slate-400" />
                   </div>
                   <h3 className="text-lg font-medium text-slate-900 mb-2">No Active Streams</h3>
